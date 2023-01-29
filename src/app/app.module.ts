@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserManagementModule } from './usermanagement/user-management.module';
+import { MasterLayoutModule } from './master-layout/master-layout.module';
 
 @NgModule({
   declarations: [
@@ -11,10 +12,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     NgbModule,
-    FormsModule,
-    ReactiveFormsModule
+    AppRoutingModule,
+    UserManagementModule,
+    MasterLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,30 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+
+[role="form"] {
+  position: absolute;
+  left: 0;
+  padding: 1rem;
+  width: 450px;
+  box-shadow: 0 0.4rem 0.4rem 0.4rem rgba(12, 12, 12, 0.7);
+  transform: translate(50%, 50%);
+  border-radius: 0.5rem;
+}
+
+[role="form"] .form-group {
+  margin-top: 0.4rem;
+}
+
+[role="form"] label {
+  text-transform: capitalize;
+}
+
+.invalid {
+  border: 2px solid red;
+}
+
+.invalidText {
+  color: red;
+}

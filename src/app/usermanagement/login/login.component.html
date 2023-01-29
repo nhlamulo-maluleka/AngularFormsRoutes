@@ -1,0 +1,39 @@
+<div class="container">
+  <form role="form" [formGroup]="loginForm" (ngSubmit)="logUser()">
+    <h1 class="text-center">LOGIN</h1>
+    <div class="form-group">
+      <label for="user">username</label>
+      <input
+        required
+        minlength="3"
+        maxlength="14"
+        placeholder="example@mail.com"
+        class="form-control"
+        type="email"
+        id="user"
+        formControlName="username"
+        [ngClass]="{ invalid: isTouched('username') && !isValid('username') }"
+      />
+    </div>
+    <div class="form-group">
+      <label for="pass">Password</label>
+      <input
+        required
+        minlength="3"
+        maxlength="14"
+        placeholder="******"
+        class="form-control"
+        type="password"
+        id="pass"
+        formControlName="password"
+        [ngClass]="{ invalid: isTouched('password') && !isValid('password') }"
+      />
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-dark form-control">Login</button>
+    </div>
+    <div *ngIf="">
+      <label class="invalidText">Incorrect login details</label>
+    </div>
+  </form>
+</div>
